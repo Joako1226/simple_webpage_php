@@ -1,7 +1,7 @@
 <?php
 
 $text = [
-    'title_index' => 'Exemple de Validació dels usuaris',
+    'title_index' => 'NEO COMPONENTES',
     'login' => 'Inicia sessió',
     'register' => 'Crea un compte',
     'lang_ca'=> 'Català',
@@ -31,11 +31,13 @@ $text = [
     'language'=>'Idioma',
     'register_image'=> 'Imatge de perfil',
     'welcome' => 'Hola ',
-    'profile'=> 'Perfil'
-
-
-
-
-
-
+    'profile'=> 'Perfil',
+     'see_more'=> 'Veure més',
+    'add_cart'=> 'Afegeix al carreto',
+    'buy'=> 'Comprar',
+    'see_products'=> 'Veure productes',
+    'neo'=> 'NEO COMPONENTES',
+    'discover_products'=> 'Descubreix tots els nostres productes',
+    'laptops' => 'Ordinadors portátils',
+    'best'=> 'Els millors portátils'
 ];

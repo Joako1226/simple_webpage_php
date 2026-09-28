@@ -2,10 +2,10 @@
 include('../includes/header.php');
 include('../includes/navbar_test.php');
 
-?>
 
-<div class="container mt-5">
-    <h1 class="mt-2 text-center">
-        EStic al home
-    </h1>
-</div>
+include("../includes/banner.php");
+
+loadBanner($text["neo"], $text["discover_products"], $text["see_products"], "Banner.png");
+
+?>
+ 

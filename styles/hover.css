@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --orange_light: rgb(255, 50, 0);
+    --orange_dark: rgb(255, 80, 0);
+}
+
+* {
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.btn {
+    background-color: var(--orange_light);
+    color: white;
+    border-color: var(--orange_dark);
+    ;
+}
+
+.btn:hover {
+    transition: 100ms ease;
+    scale: 1.05;
+    color: var(--orange_light);
+    font-weight: bold;
+    background-color: white;
+    border-color: rgb(172, 172, 172);
+}
+
+.btn:active {
+    color: white;
+    background-color: var(--orange_dark);
+    font-weight: normal;
+}
+
+h1 {
+    -webkit-text-fill-color: ease;
+    text-shadow: 5px 5px 20px rgb(3, 3, 3);
+}
+
+.dropdown-item:hover {
+    transition: 100ms ease;
+    color: black;
+    font-weight: bold;
+}
+
+.dropdown-item:active {
+    transition: 100ms ease;
+    color: white;
+    background-color: var(--orange_light);
+    font-weight: normal;
+}
+
+.navbar-brand {
+    img {
+        transition: 1s ease;
+        rotate: 0deg;
+    }
+}
+
+.navbar-brand:hover {
+    transition: 0.1s ease;
+    scale: 1.02;
+    color: var(--orange_light);
+
+    img {
+        transition: 1s ease;
+        rotate: 360deg;
+    }
+}
+
+h4 {
+    color: var(--orange_dark);
+}
+
+.card{
+    a {
+        text-decoration: none;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.card:hover {
+    transition: ease 0.1s;
+    scale: 1.02;
+    background-color: var(--orange_light);
+
+    * {
+        background-color: var(--orange_light);
+        color: white;
+    }
+
+    text-success {
+        filter: invert() !important;
+    }
+
+    h4 {
+        transition: ease 0.2s;
+        scale: 1.1;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    img {
+        background-color: white;
+    }
+}
