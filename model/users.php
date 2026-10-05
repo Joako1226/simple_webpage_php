@@ -2,11 +2,11 @@
 $users = [
     [
         "id" => 0,
-        "name" => "Toni Fernandez",
+        "name" => "Joaquin Gutierrez",
         "username" => "admin",
         //Desem el password encriptat
         "password" => password_hash('123', PASSWORD_DEFAULT),
-        "mail" => "toni.fernandez@cirvianum.cat",
+        "mail" => "joaquin@123.com",
         "rol" => "admin",
         "image" => 'default.png'
     ],

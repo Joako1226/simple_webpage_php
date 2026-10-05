@@ -40,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "image" => $imageName 
         ]; 
     array_push($_SESSION['users'], $newUser); 
+    //file_put_contents("../model/users.php", $newUser); MODIFICA TOT EL ARCHIU
     $_SESSION['user_logged'] = $newUser;
     header("Location: ../views/products.php"); 
 } 

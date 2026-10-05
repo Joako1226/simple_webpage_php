@@ -83,5 +83,6 @@ $items = [
     ]
 
 ];
+$_SESSION["products"] = $items;
 
 ?>

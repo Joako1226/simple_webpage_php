@@ -4,4 +4,5 @@
         "productsImgDir" => "../public/images/products/",
         "bannersDir" => "../public/images/banners/"
     ];
+    $_SESSION["routes"] = $directories;
 ?>

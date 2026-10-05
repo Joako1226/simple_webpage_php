@@ -1,3 +1,4 @@
+```css
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
@@ -5,19 +6,27 @@
     --orange_dark: rgb(255, 80, 0);
 }
 
+/* =========================
+   GENERAL
+   ========================= */
+
 * {
     font-family: "IBM Plex Sans", sans-serif;
 }
+
+
+/* =========================
+   BOTONES
+   ========================= */
 
 .btn {
     background-color: var(--orange_light);
     color: white;
     border-color: var(--orange_dark);
-    ;
+    transition: 100ms ease;
 }
 
 .btn:hover {
-    transition: 100ms ease;
     scale: 1.05;
     color: var(--orange_light);
     font-weight: bold;
@@ -26,15 +35,30 @@
 }
 
 .btn:active {
+    scale: 1;
     color: white;
     background-color: var(--orange_dark);
+    border-color: var(--orange_dark);
     font-weight: normal;
 }
 
+
+/* =========================
+   TÍTULOS
+   ========================= */
+
 h1 {
-    -webkit-text-fill-color: ease;
     text-shadow: 5px 5px 20px rgb(3, 3, 3);
 }
+
+h4 {
+    color: var(--orange_dark);
+}
+
+
+/* =========================
+   DROPDOWN
+   ========================= */
 
 .dropdown-item:hover {
     transition: 100ms ease;
@@ -49,58 +73,129 @@ h1 {
     font-weight: normal;
 }
 
-.navbar-brand {
-    img {
-        transition: 1s ease;
-        rotate: 0deg;
-    }
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar-brand img {
+    transition: 1s ease;
+    rotate: 0deg;
 }
 
 .navbar-brand:hover {
-    transition: 0.1s ease;
+    transition: 100ms ease;
     scale: 1.02;
     color: var(--orange_light);
-
-    img {
-        transition: 1s ease;
-        rotate: 360deg;
-    }
 }
 
-h4 {
-    color: var(--orange_dark);
+.navbar-brand:hover img {
+    transition: 1s ease;
+    rotate: 360deg;
 }
 
-.card{
-    a {
-        text-decoration: none;
-        color: inherit;
-        background-color: transparent;
-        cursor: pointer;
-    }
+
+/* =========================
+   LINKS DENTRO DE CARDS
+   ========================= */
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-.card:hover {
+
+/* =========================
+   PRODUCT CARDS
+   ========================= */
+
+.product .card {
     transition: ease 0.1s;
+}
+
+.product .card:hover {
     scale: 1.02;
     background-color: var(--orange_light);
-
-    * {
-        background-color: var(--orange_light);
-        color: white;
-    }
-
-    text-success {
-        filter: invert() !important;
-    }
-
-    h4 {
-        transition: ease 0.2s;
-        scale: 1.1;
-        background-color: rgba(255, 255, 255, 0);
-    }
-
-    img {
-        background-color: white;
-    }
 }
+
+
+/*
+ * No usamos .card:hover *
+ * porque afectaría al botón, formulario,
+ * inputs, etc.
+ */
+
+.product .card:hover .card-title,
+.product .card:hover .card-text {
+    color: white;
+}
+
+.product .card:hover h4 {
+    transition: ease 0.2s;
+    scale: 1.1;
+    background-color: transparent;
+    color: white;
+}
+
+.product .card:hover img {
+    background-color: white;
+}
+
+
+/* =========================
+   BOTÓN DEL PRODUCTO
+   ========================= */
+
+/*
+ * El botón mantiene su estilo incluso
+ * cuando la tarjeta está en hover.
+ */
+
+.product .card .btn {
+    background-color: var(--orange_light);
+    color: white;
+    border-color: var(--orange_dark);
+}
+
+.product .card .btn:hover {
+    background-color: white;
+    color: var(--orange_light);
+    border-color: rgb(172, 172, 172);
+    font-weight: bold;
+    scale: 1.05;
+}
+
+.product .card .btn:active {
+    background-color: var(--orange_dark);
+    color: white;
+    border-color: var(--orange_dark);
+    scale: 1;
+    font-weight: normal;
+}
+
+
+/* =========================
+   FORMULARIO DEL PRODUCTO
+   ========================= */
+
+.product .card form {
+    background-color: transparent;
+    margin-top: 1rem;
+}
+
+
+/* =========================
+   LISTA DE PRECIO
+   ========================= */
+
+.product .card .list-group-item {
+    transition: 100ms ease;
+}
+
+.product .card:hover .list-group-item {
+    background-color: var(--orange_light);
+    color: white;
+}
+```

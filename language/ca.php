@@ -39,5 +39,24 @@ $text = [
     'neo'=> 'NEO COMPONENTES',
     'discover_products'=> 'Descubreix tots els nostres productes',
     'laptops' => 'Ordinadors portátils',
-    'best'=> 'Els millors portátils'
+    'best'=> 'Els millors portátils',
+    'search'=> 'Buscar',
+    'unlogged'=> "No has iniciat sessió",
+    'name'=> "Nom",
+    'category'=> "Categoria",   
+    'maxPrice'=> "Preu maxim",
+    'add_to_cart' => "Afegeix al carret",
+    'productInCart' => 'Producte afegit correctament',
+    'cart'=>'La meva compra',
+    'historicCart' => 'Les meves comandes',
+     'shpoingCart' => 'Carret de la compra',
+    'product' => 'Producte',
+    'quantity' => 'Quantitat',
+    'cartSubtotal' => 'Subtotal',
+    'cartTotal' => 'Total',
+    'confirmCart' => 'Confirmar compra',
+    'price' => 'Preu',
+    'no_order_history'=> 'Numero de ordre',
+    'order_history' => 'Historial de ordres'
+    
 ];
