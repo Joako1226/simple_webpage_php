@@ -24,7 +24,7 @@ include("../model/routes.php");
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <?php if (isset($_SESSION['user_logged'])) { ?>
-            <a class="nav-link active" href="?logout=1">Logout</a>
+            <a class="nav-link active" href="../controllers/logout_controller.php">Logout</a>
           <?php }
             else { ?>
             <a class="nav-link active" href="./login.php">Login</a>
