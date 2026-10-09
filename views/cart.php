@@ -1,17 +1,15 @@
 <?php
 
-include("../functions/user_functions.php");
+include("../controllers/islogged_controller.php");
 
-// userLogged();
+isLogged();
+
+include("../functions/user_functions.php");
 
 $text = [];
 
 include("../includes/header.php");
 include("../includes/navbar_test.php");
-include("../controllers/islogged_controller.php");
-isLogged();
 
 include("../functions/cart_functions.php");
 include("../includes/footer.php");
-print_r($_SESSION["user_logged"]);
-?>

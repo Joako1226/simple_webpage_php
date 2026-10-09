@@ -1,102 +1,246 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
-    --orange_light: rgb(255, 50, 0);
-    --orange_dark: rgb(255, 80, 0);
+--orange_light: rgb(255, 50, 0);
+--orange_dark: rgb(255, 80, 0);
+--card_background: #ffffff;
+--border_color: #dddddd;
+--text_color: #111111;
 }
 
 * {
-    font-family: "IBM Plex Sans", sans-serif;
-}
+  font-family: "IBM Plex Sans", sans-serif;
+  box-sizing: border-box;
+  }
 
 .btn {
-    background-color: var(--orange_light);
-    color: white;
-    border-color: var(--orange_dark);
-    ;
+display: inline-block;
+padding: 8px 16px;
+color: white;
+background-color: var(--orange_light);
+border: 1px solid var(--orange_light);
+border-radius: 5px;
+font-weight: 500;
+text-decoration: none;
+cursor: pointer;
+transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover {
-    transition: 100ms ease;
-    scale: 1.05;
-    color: var(--orange_light);
-    font-weight: bold;
-    background-color: white;
-    border-color: rgb(172, 172, 172);
+color: var(--orange_light);
+background-color: white;
+border-color: var(--orange_light);
+transform: scale(1.04);
+box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
 .btn:active {
-    color: white;
-    background-color: var(--orange_dark);
-    font-weight: normal;
+color: white;
+background-color: var(--orange_dark);
+border-color: var(--orange_dark);
+transform: scale(0.97);
+}
+
+.btn:focus-visible {
+outline: 3px solid rgba(255, 80, 0, 0.35);
+outline-offset: 3px;
+}
+
+.btn.btn-primary {
+color: white;
+background-color: var(--orange_light);
+border-color: var(--orange_light);
+}
+
+.btn.btn-primary:hover {
+color: var(--orange_light);
+background-color: white;
+border-color: var(--orange_light);
+}
+
+.btn.btn-primary:active {
+color: white;
+background-color: var(--orange_dark);
+border-color: var(--orange_dark);
 }
 
 h1 {
-    -webkit-text-fill-color: ease;
-    text-shadow: 5px 5px 20px rgb(3, 3, 3);
-}
-
-.dropdown-item:hover {
-    transition: 100ms ease;
-    color: black;
-    font-weight: bold;
-}
-
-.dropdown-item:active {
-    transition: 100ms ease;
-    color: white;
-    background-color: var(--orange_light);
-    font-weight: normal;
-}
-
-.navbar-brand {
-    img {
-        transition: 1s ease;
-        rotate: 0deg;
-    }
-}
-
-.navbar-brand:hover {
-    transition: 0.1s ease;
-    scale: 1.02;
-    color: var(--orange_light);
-
-    img {
-        transition: 1s ease;
-        rotate: 360deg;
-    }
+text-shadow: 5px 5px 20px rgb(3, 3, 3);
 }
 
 h4 {
-    color: var(--orange_dark);
+color: var(--orange_dark);
+margin: 10px 0;
 }
 
-.card {
-    a {
-        text-decoration: none;
-        color: inherit;
-        background-color: transparent;
-        cursor: pointer;
-    }
+.navbar-brand img {
+transition: transform 0.5s ease;
+transform: rotate(0deg);
+}
+
+.navbar-brand:hover {
+color: var(--orange_light);
+transform: scale(1.02);
+transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.navbar-brand:hover img {
+transform: rotate(360deg);
+}
+
+.dropdown-item:hover {
+color: black;
+font-weight: bold;
+transition: color 0.1s ease;
+}
+
+.dropdown-item:active {
+color: white;
+background-color: var(--orange_light);
+font-weight: normal;
+}
+
+.product {
+display: flex;
+}
+
+.product .card {
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+padding: 16px;
+background-color: var(--card_background);
+border: 1px solid var(--border_color);
+border-radius: 5px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.product .card-link {
+display: block;
+color: inherit;
+text-decoration: none;
+}
+
+.product .card-link:hover {
+color: inherit;
+background-color: transparent;
+}
+
+.product .card img {
+display: block;
+width: 100%;
+height: 210px;
+object-fit: contain;
+padding: 5px;
+background-color: white;
+transition: transform 0.2s ease;
+}
+
+.product .card .card-body {
+flex: 0 0 auto;
+padding: 12px 4px;
+text-align: center;
+background-color: transparent;
+}
+
+.product .card .card-title {
+margin-bottom: 8px;
+color: var(--text_color);
+font-size: 1rem;
+font-weight: 500;
+}
+
+.product .card .card-text {
+min-height: 36px;
+margin-bottom: 8px;
+color: #333333;
+font-size: 0.9rem;
+}
+
+.product .card h4 {
+margin: 10px 0;
+color: var(--orange_dark);
+font-size: 1.25rem;
+font-weight: 600;
+transition: color 0.2s ease;
+}
+
+.product .card .text-center {
+margin-top: auto;
+padding-top: 8px;
+}
+
+.product .card form {
+margin: 0;
+text-align: center;
+}
+
+.product .card form .btn {
+margin: 0 auto;
 }
 
 .product .card:hover {
-    transition: ease 0.1s;
-    scale: 1.02;
-    background-color: var(--orange_light);
-}
-
-.product .card:hover * {
-    background-color: var(--orange_light);
-    color: white;
+transform: translateY(-4px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+border-color: var(--orange_light);
 }
 
 .product .card:hover h4 {
-    transition: ease 0.2s;
-    scale: 1.1;
-    background-color: transparent;
+color: var(--orange_light);
 }
 
 .product .card:hover img {
-    background-color: white;
+background-color: white;
+}
+
+@media (max-width: 767px) {
+.product .card img {
+height: 190px;
+}
+}
+.product {
+display: flex;
+align-items: stretch;
+}
+
+.product .card {
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 100%;
+}
+
+.product .card-link {
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+}
+
+.product .card-link img {
+display: block;
+width: 100%;
+height: 220px;
+min-height: 220px;
+max-height: 220px;
+object-fit: contain;
+object-position: center;
+margin: 0;
+padding: 10px;
+}
+
+.product .card-link .card-body {
+flex-grow: 1;
+}
+
+.product .card form {
+margin-top: auto;
+text-align: center;
+padding-top: 10px;
+}
+
+.product .card form button {
+display: inline-block;
+margin: 0 auto;
 }

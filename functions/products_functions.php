@@ -1,4 +1,5 @@
 <?php
+
 function getItemById($id)
 {
     $items = $_SESSION["products"];
